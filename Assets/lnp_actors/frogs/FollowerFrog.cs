@@ -29,8 +29,8 @@ public class FollowerFrog : MonoBehaviour
         UpdateDestination();
 
         if (m_agent.remainingDistance >= STOP_RANGE)
-            if (m_agent.remainingDistance >= CRAWL_RANGE) m_agent.speed = 3.0f;
-            else m_agent.speed = 0.5f;
+            if (m_agent.remainingDistance >= CRAWL_RANGE) m_agent.speed = 2.0f;
+            else m_agent.speed = 0.25f;
         else m_agent.speed = 0.1f;
     }
 
