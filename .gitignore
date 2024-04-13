@@ -70,3 +70,9 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+
+
+
+# Assets, which should be imported individually from Package Manager
+# Toxic Frogs: https://assetstore.unity.com/packages/3d/characters/animals/toxic-frogs-132963 
+/[Aa]ssets/[Mm]odels/poisondartfrog/*
