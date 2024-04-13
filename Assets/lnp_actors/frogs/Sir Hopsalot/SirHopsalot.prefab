@@ -4157,6 +4157,7 @@ GameObject:
   - component: {fileID: 8973955834732475704}
   - component: {fileID: 672149216281802023}
   - component: {fileID: -3871665864686904681}
+  - component: {fileID: 7449887963949875703}
   m_Layer: 0
   m_Name: SirHopsalot
   m_TagString: Untagged
@@ -4194,7 +4195,7 @@ Animator:
   m_GameObject: {fileID: 7546936657860698304}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 75116d3ad847f4b308aea41d92d1efb8, type: 3}
-  m_Controller: {fileID: 9100000, guid: 6c9a927ec10d14ce9be8d0562e39e1c2, type: 2}
+  m_Controller: {fileID: 9100000, guid: 7ccd836d9e2ff7e41802f7dac7e98244, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -4250,6 +4251,18 @@ NavMeshAgent:
   m_BaseOffset: -0.075
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &7449887963949875703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7546936657860698304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83d11e77f599339409455f6ba8dc9055, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7709880463510840548
 GameObject:
   m_ObjectHideFlags: 0
