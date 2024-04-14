@@ -754,7 +754,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 989ddabccad084bdb8cc0c19d680b330, type: 2}
+  - {fileID: 2100000, guid: a3b2303950a624313b019c4834557628, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4161,7 +4161,7 @@ GameObject:
   - component: {fileID: 874581776911953581}
   - component: {fileID: 2188066710847868284}
   m_Layer: 0
-  m_Name: SirHopsalot
+  m_Name: BaseFrog
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4240,7 +4240,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 7546936657860698304}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5
+  m_Radius: 0.23
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
@@ -4249,7 +4249,7 @@ NavMeshAgent:
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 2
+  m_Height: 0.15
   m_BaseOffset: -0.075
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
@@ -4272,7 +4272,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7546936657860698304}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 83d11e77f599339409455f6ba8dc9055, type: 3}
   m_Name: 
