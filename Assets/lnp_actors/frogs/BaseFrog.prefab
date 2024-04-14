@@ -754,7 +754,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8a4d341f618654371ad279350d04e49d, type: 2}
+  - {fileID: 2100000, guid: a3b2303950a624313b019c4834557628, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4161,7 +4161,7 @@ GameObject:
   - component: {fileID: 874581776911953581}
   - component: {fileID: 2188066710847868284}
   m_Layer: 0
-  m_Name: SirHopsalot
+  m_Name: BaseFrog
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
