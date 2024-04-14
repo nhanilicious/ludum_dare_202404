@@ -1,10 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
-public class MemoryGameManager : MonoBehaviour
+public class MemoryGameManager : MonoBehaviour, IInteractable
 {
     public static MemoryGameManager Instance;
+
+    // UI
+    private Canvas _canvas;
 
     // Flowers
     public FlowerGlow FlowerG3;
@@ -16,21 +20,18 @@ public class MemoryGameManager : MonoBehaviour
     private List<FlowerGlow> _flowerSequence2;
     private List<FlowerGlow> _flowerSequence3;
 
+    public List<FlowerGlow> EnteredSequence;
+
     // Memory Game
-    private AudioSource _audioSource;
+    public int CurrentSequence = 1;
+    private float _nextInteractTime = 0f;
+    private float _interactCooldown;
+    private bool _inRange = false;
 
-    public AudioClip G3;
-    public AudioClip C4;
-    public AudioClip D4;
-    public AudioClip E4;
-
-    private List<AudioClip> _memorySequence1;
-    private List<AudioClip> _memorySequence2;
-    private List<AudioClip> _memorySequence3;
-
-    public float NoteInterval = 0.5f;
+    public float NoteInterval = 0.75f;
 
     public bool IsPlayingMemorySequence = false;
+    public bool AdvanceGame = false;
 
     private void Awake()
     {
@@ -38,31 +39,20 @@ public class MemoryGameManager : MonoBehaviour
         {
             Instance = this;
         }
-
-        _audioSource = GetComponent<AudioSource>();
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        _memorySequence1 = new List<AudioClip>();
-        _memorySequence1.Add(C4);
-        _memorySequence1.Add(E4);
-        _memorySequence1.Add(D4);
+        _canvas = GetComponentInChildren<Canvas>();
 
         _flowerSequence1 = new List<FlowerGlow>();
         _flowerSequence1.Add(FlowerC4);
         _flowerSequence1.Add(FlowerE4);
         _flowerSequence1.Add(FlowerD4);
 
-        _memorySequence2 = new List<AudioClip>(_memorySequence1);
-        _memorySequence2.Add(G3);
-
         _flowerSequence2 = new List<FlowerGlow>(_flowerSequence1);
         _flowerSequence2.Add(FlowerG3);
-
-        _memorySequence3 = new List<AudioClip>(_memorySequence2);
-        _memorySequence3.Add(C4);
 
         _flowerSequence3 = new List<FlowerGlow>(_flowerSequence2);
         _flowerSequence3.Add(FlowerC4);
@@ -71,37 +61,133 @@ public class MemoryGameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (IsPlayingMemorySequence)
+        if (Time.time > _nextInteractTime && _inRange)
         {
+            EnableCanvas();
+        }
+        else
+        {
+            DisableCanvas();
+        }
+
+        if (Time.time > _nextInteractTime && AdvanceGame)
+        {
+            AdvanceGame = false;
+            IsPlayingMemorySequence = true;
+            StartCoroutine(PlaySequence(GetCurrentFlowerSequence(CurrentSequence)));
             IsPlayingMemorySequence = false;
-            StartCoroutine(PlaySequence(_memorySequence3, _flowerSequence3));
         }
     }
 
-    private IEnumerator PlaySequence(List<AudioClip> sequence, List<FlowerGlow> flowerSequence)
+    private IEnumerator PlaySequence(List<FlowerGlow> flowerSequence)
     {
-        for (int i = 0; i < sequence.Count; i++)
+        _interactCooldown = flowerSequence.Count * NoteInterval;
+        _nextInteractTime = Time.time + _interactCooldown;
+
+        for (int i = 0; i < flowerSequence.Count; i++)
         {
-            _audioSource.clip = sequence[i];
-            _audioSource.Play();
             yield return flowerSequence[i].Glow(NoteInterval);
-            //yield return new WaitForSeconds(NoteInterval);
         }
     }
 
     public IEnumerator PlaySequence(int sequence)
     {
+        IsPlayingMemorySequence = true;
+        yield return StartCoroutine(PlaySequence(GetCurrentFlowerSequence(sequence)));
+        IsPlayingMemorySequence = false;
+    }
+
+    public void EnterFlower(FlowerGlow flowerGlow)
+    {
+        EnteredSequence.Add(flowerGlow);
+        _nextInteractTime = Time.time + NoteInterval;
+
+        int result = CheckEnteredSequence();
+
+        switch (result)
+        {
+            case 0:
+                if (CurrentSequence == 3)
+                {
+                    // TODO: Tell GameManager we spawned SirCroakaint
+                }
+
+                CurrentSequence += CurrentSequence < 3 ? 1 : 0;
+                EnteredSequence = new List<FlowerGlow>();
+                AdvanceGame = true;
+
+                // TODO: play happy sound if sequence 3 is completed
+                break;
+            case -1:
+                EnteredSequence = new List<FlowerGlow>();
+                // TODO: play sad sound
+                break;
+            default: break;
+        }
+    }
+
+    // -1 -> mistake
+    // 0 -> complete
+    // anything else -> incomplete
+    private int CheckEnteredSequence()
+    {
+        List<FlowerGlow> currentSeq = GetCurrentFlowerSequence(CurrentSequence);
+        int enteredSize = EnteredSequence.Count;
+        int currentSeqSize = currentSeq.Count;
+
+        for (int i = 0; i < enteredSize; i++)
+        {
+            if (EnteredSequence[i] != currentSeq[i])
+            {
+                return -1;
+            }
+        }
+
+        return enteredSize == currentSeqSize ? 0 : enteredSize;
+    }
+
+    public List<FlowerGlow> GetCurrentFlowerSequence(int sequence)
+    {
         switch (sequence)
         {
             case 1:
-                yield return PlaySequence(_memorySequence1, _flowerSequence1);
-                break;
+                return _flowerSequence1;
             case 2:
-                yield return PlaySequence(_memorySequence2, _flowerSequence2);
-                break;
+                return _flowerSequence2;
             case 3:
-                yield return PlaySequence(_memorySequence3, _flowerSequence3);
-                break;
+                return _flowerSequence3;
+            default:
+                return _flowerSequence3;
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        EnableCanvas();
+        _inRange = true;
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        DisableCanvas();
+        _inRange = false;
+    }
+
+    private void EnableCanvas()
+    {
+        _canvas.enabled = true;
+    }
+
+    private void DisableCanvas()
+    {
+        _canvas.enabled = false;
+    }
+
+    public void Interact()
+    {
+        if (Time.time > _nextInteractTime && _inRange)
+        {
+            StartCoroutine(PlaySequence(CurrentSequence));
         }
     }
 }
