@@ -44,5 +44,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 546b381c05c9a4b44a88e3266fd23958, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  frogToBeSpawned: {fileID: 5847197251328671999, guid: 52bfaaeef0490b84192c33d42378791e,
+    type: 3}
+  frogSpawnEffect: {fileID: 5071132258410729381, guid: 998d540163cc53f4d8c4fae57c258b3a,
+    type: 3}
+  frogSpawnPosition: {x: 0, y: 0, z: 0}
+  butterflyPrefab: {fileID: 8095291781305699027, guid: 6b506010c23b13f45a5310a276af1676,
+    type: 3}
+  effectPrefab: {fileID: 3744133877081091469, guid: a2a060732547fe64581bb0cb3c2bdf1d,
+    type: 3}
   butterflySpawnPosition: {x: 0, y: 0, z: 0}
-  butterflySpreadRadius: 0
+  butterflySpreadRadius: 5
+  numberOfButterflies: 5
+  spawnButterflies: 0

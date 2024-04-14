@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.UIElements;
 
-public class WhackaflyManager : MonoBehaviour
+public class WhackaflyManager : FrogSpawner
 {
     public static WhackaflyManager instance;
 
@@ -63,15 +63,5 @@ public class WhackaflyManager : MonoBehaviour
         Destroy(effect, 1.406f);
     }
 
-    public void increaseScore(int delta = 1)
-    {
-        m_score += delta;
-
-        Debug.Log("Score increased.");
-
-        if (m_score == m_targetScore)
-        {
-            Debug.Log("WIN");
-        }
-    }
+    public void increaseScore(int delta = 1) { if ((m_score += delta) == m_targetScore) SpawnFrog(); }
 }
