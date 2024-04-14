@@ -75,5 +75,6 @@ crashlytics-build.properties
 
 
 # Assets, which should be imported individually from Package Manager
-# Toxic Frogs: https://assetstore.unity.com/packages/3d/characters/animals/toxic-frogs-132963 
-/[Aa]ssets/[Mm]odels/poisondartfrog/*
+# Butterfly (Animated): https://assetstore.unity.com/packages/3d/characters/animals/insects/butterfly-animated-58355
+# Toxic Frogs: https://assetstore.unity.com/packages/3d/characters/animals/toxic-frogs-132963
+/[Aa]ssets/[Mm]odels/*
