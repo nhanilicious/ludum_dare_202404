@@ -25,9 +25,10 @@ public class FrogMoveAnimation : MonoBehaviour
     {
         switch (m_agent.speed)
         {
-            case 2.0f:
+            case 2.5f:
                 m_animator.SetFloat("Blend", Mathf.Min(m_animator.GetFloat("Blend") + Time.deltaTime * BLEND_RATE, 1.0f));
                 break;
+            case 1.0f:
             case 0.25f:
                 if (m_animator.GetFloat("Blend") > 0.5f) m_animator.SetFloat("Blend", Mathf.Min(m_animator.GetFloat("Blend") - Time.deltaTime * BLEND_RATE, 0.5f));
                 else if (m_animator.GetFloat("Blend") < 0.5f) m_animator.SetFloat("Blend", Mathf.Max(m_animator.GetFloat("Blend") + Time.deltaTime * BLEND_RATE, 0.5f));

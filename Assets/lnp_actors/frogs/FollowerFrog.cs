@@ -16,7 +16,7 @@ public class FollowerFrog : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        m_player = GameObject.Find("Player");
+        m_player = GameObject.Find("Sir Toadward");
 
         m_agent = GetComponent<NavMeshAgent>();
         m_agent.stoppingDistance = STOP_RANGE;
@@ -29,8 +29,8 @@ public class FollowerFrog : MonoBehaviour
         UpdateDestination();
 
         if (m_agent.remainingDistance >= STOP_RANGE)
-            if (m_agent.remainingDistance >= CRAWL_RANGE) m_agent.speed = 2.0f;
-            else m_agent.speed = 0.25f;
+            if (m_agent.remainingDistance >= CRAWL_RANGE) m_agent.speed = 2.5f;
+            else m_agent.speed = 1.0f;
         else m_agent.speed = 0.1f;
     }
 
