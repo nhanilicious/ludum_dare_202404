@@ -79,6 +79,10 @@ crashlytics-build.properties
 # TextMesh Pro: Unity Registry Asset
 # Toxic Frogs: https://assetstore.unity.com/packages/3d/characters/animals/toxic-frogs-132963 
 # Rocky Hills Environment: https://assetstore.unity.com/packages/3d/environments/landscapes/rocky-hills-environment-light-pack-89939
+# Grass Flowers Pack: https://assetstore.unity.com/packages/2d/textures-materials/nature/grass-flowers-pack-free-138810
+# HQ Rocks Pack: https://assetstore.unity.com/packages/3d/props/exterior/hq-rocks-pack-66895
+# Hand Painted Nature Kit LITE: https://assetstore.unity.com/packages/3d/environments/hand-painted-nature-kit-lite-69220
+# Outdoor Ground Textures: https://assetstore.unity.com/packages/2d/textures-materials/floors/outdoor-ground-textures-12555
 /[Aa]ssets/[Mm]odels/*
 /[Aa]ssets/[Tt]ext[Mm]esh\ [Pp]ro*
 
