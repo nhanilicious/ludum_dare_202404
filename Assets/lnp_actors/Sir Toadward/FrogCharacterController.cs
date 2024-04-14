@@ -9,11 +9,12 @@ public class FrogCharacterController : MonoBehaviour
     private Animator _animator;
     public Transform Cam;
 
-    public float Speed;
+    private float _speed;
+    public float WalkSpeed;
+    public float SprintSpeed;
     public float TurnSmoothTime = 0.1f;
     private float _turnSmoothVelocity;
     private float _currentSpeed;
-    private bool _isWalking;
     private bool _isJumping;
 
     Vector3 moveDir;
@@ -24,30 +25,50 @@ public class FrogCharacterController : MonoBehaviour
     private float _velocity;
     [SerializeField] private float _jumpPower;
 
+    // Animation IDs
+    private int _speedID;
+    private int _jumpID;
+    private int _attackID;
+
+    // Attack
+    private float nextAttackTime;
+    public float AttackCooldown = 0.5f;
+
+    private void Awake()
+    {
+        nextAttackTime = Time.time + AttackCooldown;
+    }
 
     // Start is called before the first frame update
     void Start()
     {
         _characterController = GetComponent<CharacterController>();
         _animator = GetComponent<Animator>();
+        _speedID = Animator.StringToHash("Speed");
+        _jumpID = Animator.StringToHash("Jump");
+        _attackID = Animator.StringToHash("Attack");
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
+        Cursor.lockState = CursorLockMode.Locked;
 
         ApplySprint();
         ApplyMovement();
         ApplyGravity();
         ApplyJump();
+        
 
-        _characterController.Move(moveDir * Time.deltaTime * Speed);
+        _characterController.Move(moveDir * Time.deltaTime * _speed);
     }
 
     private void Update()
     {
         _isJumping = Input.GetKey(KeyCode.Space);
         _animator.SetBool("Jump", _isJumping);
+
+        Attack();
     }
 
     private void ApplyMovement()
@@ -68,17 +89,14 @@ public class FrogCharacterController : MonoBehaviour
 
             moveDir = Quaternion.Euler(0, targetAngle, 0) * Vector3.forward;
 
-            _currentSpeed = _currentSpeed > Speed / 2 ? Mathf.Lerp(_currentSpeed, Speed, Time.deltaTime * 5f) : Speed;
-            _isWalking = true;
+            _currentSpeed = _currentSpeed > _speed / 2 ? Mathf.Lerp(_currentSpeed, _speed, Time.deltaTime * 5f) : _speed;
         }
         else
         {
             _currentSpeed = Mathf.Lerp(_currentSpeed, 0, Time.deltaTime * 5f);
-            _isWalking = false;
         }
 
-        _animator.SetFloat("Speed", _currentSpeed);
-        _animator.SetBool("Walk", _isWalking);
+        _animator.SetFloat(_speedID, _currentSpeed);
     }
 
     private void ApplyGravity()
@@ -102,18 +120,27 @@ public class FrogCharacterController : MonoBehaviour
         {
             _velocity += _jumpPower;
         }
-        _animator.SetBool("Jump", _isJumping);
+        _animator.SetBool(_jumpID, _isJumping);
     }
 
     private void ApplySprint()
     {
         if (Input.GetKey(KeyCode.LeftShift))
         {
-            Speed = 4;
+            _speed = SprintSpeed;
         }
         else
         {
-            Speed = 2;
+            _speed = WalkSpeed;
+        }
+    }
+
+    private void Attack()
+    {
+        if (Input.GetKeyDown(KeyCode.Mouse0) && Time.time > nextAttackTime)
+        {
+            _animator.SetTrigger(_attackID);
+            nextAttackTime = Time.time + AttackCooldown;
         }
     }
 }

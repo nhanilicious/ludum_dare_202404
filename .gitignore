@@ -75,5 +75,9 @@ crashlytics-build.properties
 
 
 # Assets, which should be imported individually from Package Manager
+# Butterfly (Animated): https://assetstore.unity.com/packages/3d/characters/animals/insects/butterfly-animated-58355
+# TextMesh Pro: Unity Registry Asset
 # Toxic Frogs: https://assetstore.unity.com/packages/3d/characters/animals/toxic-frogs-132963 
-/[Aa]ssets/[Mm]odels/poisondartfrog/*
+/[Aa]ssets/[Mm]odels/*
+/[Aa]ssets/[Tt]ext[Mm]esh\ [Pp]ro*
+
