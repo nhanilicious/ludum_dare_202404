@@ -9,7 +9,7 @@ using UnityEngine.UIElements;
 public class ChillingButterfly : MonoBehaviour
 {
     private const float STOP_RANGE = 0.1f;
-    private const float MAX_RANGE = 0.5f;
+    private const float MAX_RANGE = 0.2f;
 
     private Vector3 m_originPos;
     private Vector3 m_waypoint;
