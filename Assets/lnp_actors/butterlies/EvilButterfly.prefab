@@ -1533,6 +1533,7 @@ GameObject:
   - component: {fileID: 3451108634799526201}
   - component: {fileID: 1129162545923975615}
   - component: {fileID: 5979657950772829126}
+  - component: {fileID: 8080225952656757864}
   m_Layer: 0
   m_Name: EvilButterfly
   m_TagString: Untagged
@@ -1622,6 +1623,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &8080225952656757864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8095291781305699027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e08f36ab3535ed443b5f2b2e45d73d47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8199187866557980323
 GameObject:
   m_ObjectHideFlags: 0
