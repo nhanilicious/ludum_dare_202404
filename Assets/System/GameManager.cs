@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
 
     public GameObject player;
+    public GameObject summoner;
 
     private Dictionary<FrogKnight, bool> m_isSummoned = new Dictionary<FrogKnight, bool>();
 
@@ -52,6 +53,9 @@ public class GameManager : MonoBehaviour
                     break;
             }
         }
+
+        if (m_isSummoned.Count(x => x.Value == true) == m_isSummoned.Count)
+            if (summoner) summoner.SetActive(true);
     }
 
     public bool IsFrogSpawned(FrogKnight id) { return m_isSummoned[id]; }
