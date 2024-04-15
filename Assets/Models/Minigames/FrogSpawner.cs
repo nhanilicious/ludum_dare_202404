@@ -13,7 +13,11 @@ public abstract class FrogSpawner : MonoBehaviour
 
     protected void SpawnFrog()
     {
+        // Spawn a frog knight.
         Instantiate(frogToBeSpawned, frogSpawnPosition.position, transform.rotation);
+        GameManager.Instance.NotifyOfSummoning(frogToBeSpawned);
+
+        // Spawn a time limit effect.
         Destroy(Instantiate(frogSpawnEffect, frogSpawnPosition.position, transform.rotation), EFFECT_DURATION);
     }
 }
