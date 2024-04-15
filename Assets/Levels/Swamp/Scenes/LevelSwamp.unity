@@ -2145,6 +2145,100 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 256587814}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &262829658
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1239023281}
+    m_Modifications:
+    - target: {fileID: 3343083830832429524, guid: a5e09c82a1a1cf140a2a9f4e414cc0ab,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 20.63
+      objectReference: {fileID: 0}
+    - target: {fileID: 3343083830832429524, guid: a5e09c82a1a1cf140a2a9f4e414cc0ab,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -11.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 3343083830832429524, guid: a5e09c82a1a1cf140a2a9f4e414cc0ab,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -7.29
+      objectReference: {fileID: 0}
+    - target: {fileID: 3600772769988549664, guid: a5e09c82a1a1cf140a2a9f4e414cc0ab,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -74.60651
+      objectReference: {fileID: 0}
+    - target: {fileID: 3600772769988549664, guid: a5e09c82a1a1cf140a2a9f4e414cc0ab,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 13.027494
+      objectReference: {fileID: 0}
+    - target: {fileID: 3600772769988549664, guid: a5e09c82a1a1cf140a2a9f4e414cc0ab,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -5.297119
+      objectReference: {fileID: 0}
+    - target: {fileID: 3600772769988549664, guid: a5e09c82a1a1cf140a2a9f4e414cc0ab,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3600772769988549664, guid: a5e09c82a1a1cf140a2a9f4e414cc0ab,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3600772769988549664, guid: a5e09c82a1a1cf140a2a9f4e414cc0ab,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3600772769988549664, guid: a5e09c82a1a1cf140a2a9f4e414cc0ab,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3600772769988549664, guid: a5e09c82a1a1cf140a2a9f4e414cc0ab,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3600772769988549664, guid: a5e09c82a1a1cf140a2a9f4e414cc0ab,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3600772769988549664, guid: a5e09c82a1a1cf140a2a9f4e414cc0ab,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5801234683695368282, guid: a5e09c82a1a1cf140a2a9f4e414cc0ab,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.219
+      objectReference: {fileID: 0}
+    - target: {fileID: 7019846700267986375, guid: a5e09c82a1a1cf140a2a9f4e414cc0ab,
+        type: 3}
+      propertyPath: m_Name
+      value: Jumping Puzzle (Sir Hopsalot)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a5e09c82a1a1cf140a2a9f4e414cc0ab, type: 3}
+--- !u!4 &262829659 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3600772769988549664, guid: a5e09c82a1a1cf140a2a9f4e414cc0ab,
+    type: 3}
+  m_PrefabInstance: {fileID: 262829658}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &266981566 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 157732, guid: 607de841ee73a2f438b88121ff782aab,
@@ -11334,6 +11428,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1605136040}
+  - {fileID: 262829659}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1241442202
