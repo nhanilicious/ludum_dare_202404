@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class MemoryGameManager : MonoBehaviour, IInteractable
+public class MemoryGameManager : FrogSpawner, IInteractable
 {
     public static MemoryGameManager Instance;
 
@@ -109,6 +109,7 @@ public class MemoryGameManager : MonoBehaviour, IInteractable
             case 0:
                 if (CurrentSequence == 3)
                 {
+                    SpawnFrog();
                     // TODO: Tell GameManager we spawned SirCroakaint
                 }
 
