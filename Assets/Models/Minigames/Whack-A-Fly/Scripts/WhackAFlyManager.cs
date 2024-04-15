@@ -11,7 +11,7 @@ public class WhackaflyManager : FrogSpawner
     public GameObject butterflyPrefab;
     public GameObject effectPrefab;
 
-    public Vector3 butterflySpawnPosition = new Vector3(0.0f, 0.0f, 0.0f);
+    public Transform butterflySpawnPosition;
     public float butterflySpreadRadius = 2.0f;
     public int numberOfButterflies = 5;
 
@@ -46,9 +46,9 @@ public class WhackaflyManager : FrogSpawner
 
         for (int i = 0; i < numberOfButterflies; i++)
         {
-            float x = Random.Range(butterflySpawnPosition.x - butterflySpreadRadius, butterflySpawnPosition.x + butterflySpreadRadius);
-            float y = Random.Range(butterflySpawnPosition.y + MIN_Y, butterflySpawnPosition.y + MAX_Y);
-            float z = Random.Range(butterflySpawnPosition.z - butterflySpreadRadius, butterflySpawnPosition.z + butterflySpreadRadius);
+            float x = Random.Range(butterflySpawnPosition.position.x - butterflySpreadRadius, butterflySpawnPosition.position.x + butterflySpreadRadius);
+            float y = Random.Range(butterflySpawnPosition.position.y + MIN_Y, butterflySpawnPosition.position.y + MAX_Y);
+            float z = Random.Range(butterflySpawnPosition.position.z - butterflySpreadRadius, butterflySpawnPosition.position.z + butterflySpreadRadius);
 
             Vector3 targetPos = new Vector3(x, y, z);
 
@@ -58,7 +58,7 @@ public class WhackaflyManager : FrogSpawner
             m_targetScore++;
         }
 
-        GameObject effect = Instantiate(effectPrefab, butterflySpawnPosition, transform.rotation);
+        GameObject effect = Instantiate(effectPrefab, butterflySpawnPosition.position, transform.rotation);
         effect.transform.localScale = new Vector3(1.0f, 1.0f, 1.0f) * butterflySpreadRadius;
         Destroy(effect, 1.406f);
     }

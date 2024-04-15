@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &323422619339368139
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3434248054544581137}
+  - component: {fileID: 7862371565183244510}
+  m_Layer: 0
+  m_Name: Whack-A-Fly Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3434248054544581137
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 323422619339368139}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.4354404, y: 1.2345146, z: -2.47601}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7862371565183244510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 323422619339368139}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 546b381c05c9a4b44a88e3266fd23958, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frogToBeSpawned: {fileID: 5847197251328671999, guid: 52bfaaeef0490b84192c33d42378791e,
+    type: 3}
+  frogSpawnEffect: {fileID: 5071132258410729381, guid: 998d540163cc53f4d8c4fae57c258b3a,
+    type: 3}
+  frogSpawnPosition: {x: 0, y: 0, z: 0}
+  butterflyPrefab: {fileID: 8095291781305699027, guid: 6b506010c23b13f45a5310a276af1676,
+    type: 3}
+  effectPrefab: {fileID: 3744133877081091469, guid: a2a060732547fe64581bb0cb3c2bdf1d,
+    type: 3}
+  butterflySpawnPosition: {x: 0, y: 0, z: 0}
+  butterflySpreadRadius: 5
+  numberOfButterflies: 5
+  spawnButterflies: 0
