@@ -11,17 +11,17 @@ PrefabInstance:
     - target: {fileID: 120177615063855674, guid: 94a0040fde1474e46985a45e9f402abf,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 3.8440552
       objectReference: {fileID: 0}
     - target: {fileID: 120177615063855674, guid: 94a0040fde1474e46985a45e9f402abf,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 4.7421494
       objectReference: {fileID: 0}
     - target: {fileID: 120177615063855674, guid: 94a0040fde1474e46985a45e9f402abf,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 3.7338867
       objectReference: {fileID: 0}
     - target: {fileID: 120177615063855674, guid: 94a0040fde1474e46985a45e9f402abf,
         type: 3}
@@ -31,17 +31,17 @@ PrefabInstance:
     - target: {fileID: 120177615063855674, guid: 94a0040fde1474e46985a45e9f402abf,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 120177615063855674, guid: 94a0040fde1474e46985a45e9f402abf,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 120177615063855674, guid: 94a0040fde1474e46985a45e9f402abf,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 120177615063855674, guid: 94a0040fde1474e46985a45e9f402abf,
         type: 3}
@@ -58,10 +58,45 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2177334490389206990, guid: 94a0040fde1474e46985a45e9f402abf,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -11.815
+      objectReference: {fileID: 0}
+    - target: {fileID: 2177334490389206990, guid: 94a0040fde1474e46985a45e9f402abf,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5.876
+      objectReference: {fileID: 0}
+    - target: {fileID: 2177334490389206990, guid: 94a0040fde1474e46985a45e9f402abf,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.407
+      objectReference: {fileID: 0}
     - target: {fileID: 5852979976972760029, guid: 94a0040fde1474e46985a45e9f402abf,
         type: 3}
       propertyPath: m_Name
-      value: Jumping Puzzle Variant
+      value: Jumping Puzzle (Sir Fromapond)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6841499238458969188, guid: 94a0040fde1474e46985a45e9f402abf,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6976171564657157696, guid: 94a0040fde1474e46985a45e9f402abf,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.073
+      objectReference: {fileID: 0}
+    - target: {fileID: 6976171564657157696, guid: 94a0040fde1474e46985a45e9f402abf,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.203
+      objectReference: {fileID: 0}
+    - target: {fileID: 6976171564657157696, guid: 94a0040fde1474e46985a45e9f402abf,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.005
       objectReference: {fileID: 0}
     - target: {fileID: 6998355706273345397, guid: 94a0040fde1474e46985a45e9f402abf,
         type: 3}

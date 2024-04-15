@@ -8,20 +8,35 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 13342921124248841, guid: a47c45cb2617ec44e8955ca1dc33ace4,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 20.63
+      objectReference: {fileID: 0}
+    - target: {fileID: 13342921124248841, guid: a47c45cb2617ec44e8955ca1dc33ace4,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -11.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 13342921124248841, guid: a47c45cb2617ec44e8955ca1dc33ace4,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -7.29
+      objectReference: {fileID: 0}
     - target: {fileID: 2284136009466583293, guid: a47c45cb2617ec44e8955ca1dc33ace4,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -74.60651
       objectReference: {fileID: 0}
     - target: {fileID: 2284136009466583293, guid: a47c45cb2617ec44e8955ca1dc33ace4,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 13.027494
       objectReference: {fileID: 0}
     - target: {fileID: 2284136009466583293, guid: a47c45cb2617ec44e8955ca1dc33ace4,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -5.297119
       objectReference: {fileID: 0}
     - target: {fileID: 2284136009466583293, guid: a47c45cb2617ec44e8955ca1dc33ace4,
         type: 3}
@@ -31,17 +46,17 @@ PrefabInstance:
     - target: {fileID: 2284136009466583293, guid: a47c45cb2617ec44e8955ca1dc33ace4,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2284136009466583293, guid: a47c45cb2617ec44e8955ca1dc33ace4,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2284136009466583293, guid: a47c45cb2617ec44e8955ca1dc33ace4,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2284136009466583293, guid: a47c45cb2617ec44e8955ca1dc33ace4,
         type: 3}
@@ -58,10 +73,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4677540378554492579, guid: a47c45cb2617ec44e8955ca1dc33ace4,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5702088438888913178, guid: a47c45cb2617ec44e8955ca1dc33ace4,
         type: 3}
       propertyPath: m_Name
-      value: Jumping Puzzle Variant
+      value: Jumping Puzzle (Sir Hopsalot)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9135624882500439175, guid: a47c45cb2617ec44e8955ca1dc33ace4,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.219
       objectReference: {fileID: 0}
     - target: {fileID: 9153339819160143282, guid: a47c45cb2617ec44e8955ca1dc33ace4,
         type: 3}
