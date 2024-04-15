@@ -75,6 +75,7 @@ crashlytics-build.properties
 
 
 # Assets, which should be imported individually from Package Manager
+# 2D Casual UI HD: https://assetstore.unity.com/packages/2d/gui/icons/2d-casual-ui-hd-82080
 # Butterfly (Animated): https://assetstore.unity.com/packages/3d/characters/animals/insects/butterfly-animated-58355
 # Fantasy Forest Set - FREER!: https://assetstore.unity.com/packages/3d/environments/fantasy/fantasy-forest-set-free-70568
 # Grass Flowers Pack: https://assetstore.unity.com/packages/2d/textures-materials/nature/grass-flowers-pack-free-138810
@@ -85,6 +86,7 @@ crashlytics-build.properties
 # Outdoor Ground Textures: https://assetstore.unity.com/packages/2d/textures-materials/floors/outdoor-ground-textures-12555
 # Rocky Hills Environment: https://assetstore.unity.com/packages/3d/environments/landscapes/rocky-hills-environment-light-pack-89939
 # Simple Water Shader URP: https://assetstore.unity.com/packages/2d/textures-materials/water/simple-water-shader-urp-191449
+# Stone UI: https://assetstore.unity.com/packages/2d/gui/icons/stone-ui-182526
 # TextMesh Pro: Unity Registry Asset
 # Toxic Frogs: https://assetstore.unity.com/packages/3d/characters/animals/toxic-frogs-132963
 /[Aa]ssets/[Tt]hirdParty/*

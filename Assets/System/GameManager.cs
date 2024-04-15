@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,6 +20,8 @@ public class GameManager : MonoBehaviour
 
     private Dictionary<FrogKnight, bool> m_isSummoned = new Dictionary<FrogKnight, bool>();
 
+    public event Action<FrogKnight> CompleteQuest;
+
     private void Awake()
     {
         if (Instance == null) Instance = this;
@@ -33,15 +36,19 @@ public class GameManager : MonoBehaviour
             {
                 case "Sir Croakaint":
                     m_isSummoned[FrogKnight.Croakaint] = true;
+                    CompleteQuest?.Invoke(FrogKnight.Croakaint);
                     break;
                 case "Sir Fromapond":
                     m_isSummoned[FrogKnight.Fromapond] = true;
+                    CompleteQuest?.Invoke(FrogKnight.Fromapond);
                     break;
                 case "Sir Hopsalot":
                     m_isSummoned[FrogKnight.Hopsalot] = true;
+                    CompleteQuest?.Invoke(FrogKnight.Hopsalot);
                     break;
                 case "Sir Ribbitan":
                     m_isSummoned[FrogKnight.Ribbitan] = true;
+                    CompleteQuest?.Invoke(FrogKnight.Ribbitan);
                     break;
             }
         }
