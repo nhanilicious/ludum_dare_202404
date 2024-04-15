@@ -264,17 +264,17 @@ PrefabInstance:
     - target: {fileID: 6397455736614364957, guid: 00eef23543b884e43aec26e811f9ae14,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.074376024
+      value: 0.07437603
       objectReference: {fileID: 0}
     - target: {fileID: 6397455736614364957, guid: 00eef23543b884e43aec26e811f9ae14,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000000020921965
+      value: -0.000000018467361
       objectReference: {fileID: 0}
     - target: {fileID: 6397455736614364957, guid: 00eef23543b884e43aec26e811f9ae14,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.0000000015604144
+      value: 0.0000000013773438
       objectReference: {fileID: 0}
     - target: {fileID: 7605239643834172958, guid: 00eef23543b884e43aec26e811f9ae14,
         type: 3}
@@ -448,6 +448,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Minigames
+      objectReference: {fileID: 0}
+    - target: {fileID: 5677649836144520212, guid: 09e74d33b6040714092c847368c4b280,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 20.319
+      objectReference: {fileID: 0}
+    - target: {fileID: 5677649836144520212, guid: 09e74d33b6040714092c847368c4b280,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -8.061
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
