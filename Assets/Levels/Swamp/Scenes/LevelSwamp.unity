@@ -139,12 +139,12 @@ PrefabInstance:
     - target: {fileID: 1289722129910405548, guid: 00eef23543b884e43aec26e811f9ae14,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.0000000031668717
+      value: -0.0000000032109666
       objectReference: {fileID: 0}
     - target: {fileID: 1289722129910405548, guid: 00eef23543b884e43aec26e811f9ae14,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 5.3728987e-11
+      value: 5.44771e-11
       objectReference: {fileID: 0}
     - target: {fileID: 1836883257658889502, guid: 00eef23543b884e43aec26e811f9ae14,
         type: 3}
@@ -239,12 +239,12 @@ PrefabInstance:
     - target: {fileID: 6090109276947843409, guid: 00eef23543b884e43aec26e811f9ae14,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.0000000064222365
+      value: -0.000000006444094
       objectReference: {fileID: 0}
     - target: {fileID: 6090109276947843409, guid: 00eef23543b884e43aec26e811f9ae14,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 1.08959265e-10
+      value: 1.09330094e-10
       objectReference: {fileID: 0}
     - target: {fileID: 6397455736614364957, guid: 00eef23543b884e43aec26e811f9ae14,
         type: 3}
@@ -264,17 +264,17 @@ PrefabInstance:
     - target: {fileID: 6397455736614364957, guid: 00eef23543b884e43aec26e811f9ae14,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.074376024
+      value: 0.07437605
       objectReference: {fileID: 0}
     - target: {fileID: 6397455736614364957, guid: 00eef23543b884e43aec26e811f9ae14,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000000033227725
+      value: 0.000000011966873
       objectReference: {fileID: 0}
     - target: {fileID: 6397455736614364957, guid: 00eef23543b884e43aec26e811f9ae14,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.0000000024782099
+      value: -8.925207e-10
       objectReference: {fileID: 0}
     - target: {fileID: 7605239643834172958, guid: 00eef23543b884e43aec26e811f9ae14,
         type: 3}
@@ -626,6 +626,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Terrain
+      objectReference: {fileID: 0}
+    - target: {fileID: 6441969336861778738, guid: 3464794fda34b7840b213ea21d2a2670,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8173439957437201551, guid: 3464794fda34b7840b213ea21d2a2670,
         type: 3}
