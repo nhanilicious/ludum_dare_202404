@@ -19,8 +19,6 @@ public class JumpPuzzle : FrogSpawner
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("test");
-
         if (other.tag == "Player")
         {
             SpawnFrog();

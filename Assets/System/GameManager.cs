@@ -6,18 +6,14 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
+    public GameObject player;
+
     public Vector3 SavedCoords;
 
     // Memory Game
     public bool IsSirCroakaintSpawned = false;
 
-    private void Awake()
-    {
-        if (Instance == null)
-        {
-            Instance = this;
-        }
-    }
+    private void Awake() { if (Instance == null) Instance = this; }
 
     public void SaveCoords(Vector3 coords)
     {
