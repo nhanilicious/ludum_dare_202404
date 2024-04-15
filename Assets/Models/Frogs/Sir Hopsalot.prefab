@@ -8,6 +8,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 874581776911953581, guid: f23bad53147a2ea4c8ef8d8d3a46cdf9,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1070773527108764346, guid: f23bad53147a2ea4c8ef8d8d3a46cdf9,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -63,10 +68,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5771157063073819315, guid: f23bad53147a2ea4c8ef8d8d3a46cdf9,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7546936657860698304, guid: f23bad53147a2ea4c8ef8d8d3a46cdf9,
         type: 3}
       propertyPath: m_Name
-      value: SirHopsalot
+      value: Sir Hopsalot
       objectReference: {fileID: 0}
     - target: {fileID: 7546936657860698304, guid: f23bad53147a2ea4c8ef8d8d3a46cdf9,
         type: 3}
