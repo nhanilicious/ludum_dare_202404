@@ -139,12 +139,12 @@ PrefabInstance:
     - target: {fileID: 1289722129910405548, guid: 00eef23543b884e43aec26e811f9ae14,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.0000000032109666
+      value: -0.0000000032248082
       objectReference: {fileID: 0}
     - target: {fileID: 1289722129910405548, guid: 00eef23543b884e43aec26e811f9ae14,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 5.44771e-11
+      value: 5.4711936e-11
       objectReference: {fileID: 0}
     - target: {fileID: 1836883257658889502, guid: 00eef23543b884e43aec26e811f9ae14,
         type: 3}
@@ -239,12 +239,12 @@ PrefabInstance:
     - target: {fileID: 6090109276947843409, guid: 00eef23543b884e43aec26e811f9ae14,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000000006444094
+      value: -0.0000000064510024
       objectReference: {fileID: 0}
     - target: {fileID: 6090109276947843409, guid: 00eef23543b884e43aec26e811f9ae14,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 1.09330094e-10
+      value: 1.0944735e-10
       objectReference: {fileID: 0}
     - target: {fileID: 6397455736614364957, guid: 00eef23543b884e43aec26e811f9ae14,
         type: 3}
@@ -264,17 +264,17 @@ PrefabInstance:
     - target: {fileID: 6397455736614364957, guid: 00eef23543b884e43aec26e811f9ae14,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.07437605
+      value: 0.074376024
       objectReference: {fileID: 0}
     - target: {fileID: 6397455736614364957, guid: 00eef23543b884e43aec26e811f9ae14,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000000011966873
+      value: -0.000000020921965
       objectReference: {fileID: 0}
     - target: {fileID: 6397455736614364957, guid: 00eef23543b884e43aec26e811f9ae14,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -8.925207e-10
+      value: 0.0000000015604144
       objectReference: {fileID: 0}
     - target: {fileID: 7605239643834172958, guid: 00eef23543b884e43aec26e811f9ae14,
         type: 3}
@@ -294,6 +294,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1128572104798422468, guid: 09e74d33b6040714092c847368c4b280,
+        type: 3}
+      propertyPath: MaxDistance
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 1270714636575946543, guid: 09e74d33b6040714092c847368c4b280,
         type: 3}
       propertyPath: m_LocalPosition.x
