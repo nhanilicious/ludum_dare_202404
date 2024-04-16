@@ -48,12 +48,12 @@ MonoBehaviour:
     type: 3}
   frogSpawnEffect: {fileID: 5071132258410729381, guid: 998d540163cc53f4d8c4fae57c258b3a,
     type: 3}
-  frogSpawnPosition: {x: 0, y: 0, z: 0}
+  frogSpawnPosition: {fileID: 0}
   butterflyPrefab: {fileID: 8095291781305699027, guid: 6b506010c23b13f45a5310a276af1676,
     type: 3}
-  effectPrefab: {fileID: 3744133877081091469, guid: a2a060732547fe64581bb0cb3c2bdf1d,
+  effectPrefab: {fileID: 3744133877081091469, guid: 4143fe4693d492c4594875e8fdee1cf9,
     type: 3}
-  butterflySpawnPosition: {x: 0, y: 0, z: 0}
+  butterflySpawnPosition: {fileID: 0}
   butterflySpreadRadius: 5
   numberOfButterflies: 5
   spawnButterflies: 0
