@@ -33,6 +33,11 @@ public class MemoryGameManager : FrogSpawner, IInteractable
     public bool IsPlayingMemorySequence = false;
     public bool AdvanceGame = false;
 
+    // Audio clips
+    public AudioClip Win;
+    public AudioClip Mistake;
+    private AudioSource _audioSource;
+
     private void Awake()
     {
         if (Instance == null)
@@ -45,6 +50,7 @@ public class MemoryGameManager : FrogSpawner, IInteractable
     void Start()
     {
         _canvas = GetComponentInChildren<Canvas>();
+        _audioSource = GetComponent<AudioSource>();
 
         _flowerSequence1 = new List<FlowerGlow>();
         _flowerSequence1.Add(FlowerC4);
@@ -100,7 +106,7 @@ public class MemoryGameManager : FrogSpawner, IInteractable
     public void EnterFlower(FlowerGlow flowerGlow)
     {
         EnteredSequence.Add(flowerGlow);
-        _nextInteractTime = Time.time + NoteInterval;
+        _nextInteractTime = Time.time + NoteInterval * 2;
 
         int result = CheckEnteredSequence();
 
@@ -110,21 +116,25 @@ public class MemoryGameManager : FrogSpawner, IInteractable
                 if (CurrentSequence == 3)
                 {
                     SpawnFrog();
-                    // TODO: Tell GameManager we spawned SirCroakaint
+                    PlayClip(Win);
                 }
 
                 CurrentSequence += CurrentSequence < 3 ? 1 : 0;
                 EnteredSequence = new List<FlowerGlow>();
                 AdvanceGame = true;
-
-                // TODO: play happy sound if sequence 3 is completed
                 break;
             case -1:
                 EnteredSequence = new List<FlowerGlow>();
-                // TODO: play sad sound
+                PlayClip(Mistake);
                 break;
             default: break;
         }
+    }
+
+    private void PlayClip(AudioClip clip)
+    {
+        _audioSource.clip = clip;
+        _audioSource.Play();
     }
 
     // -1 -> mistake
