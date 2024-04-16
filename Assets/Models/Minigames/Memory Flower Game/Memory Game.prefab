@@ -96,6 +96,16 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1097923093915345606, guid: 00fe78dddc2382c4a890bc0b999c8832,
         type: 3}
+      propertyPath: Win
+      value: 
+      objectReference: {fileID: 8300000, guid: cc44603ad1136ad4eb59241590a5faba, type: 3}
+    - target: {fileID: 1097923093915345606, guid: 00fe78dddc2382c4a890bc0b999c8832,
+        type: 3}
+      propertyPath: Mistake
+      value: 
+      objectReference: {fileID: 8300000, guid: 40e65999c07348f44aa75fdc16dff4ef, type: 3}
+    - target: {fileID: 1097923093915345606, guid: 00fe78dddc2382c4a890bc0b999c8832,
+        type: 3}
       propertyPath: frogSpawnPosition
       value: 
       objectReference: {fileID: 1542338341403773584}
